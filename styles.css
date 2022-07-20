@@ -13,6 +13,9 @@
   --clr-white: hsl(0, 0%, 100%);
   --fs-p: 18px;
   --ff-main: "Outfit", sans-serif;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
 }
 
 html,
@@ -21,8 +24,150 @@ main {
   min-height: 100vh;
 }
 
+h2,
+p {
+  font-size: inherit;
+}
+
+body {
+  background-color: var(--clr-body);
+  color: var(--clr-white);
+  font-family: var(--ff-main);
+  font-size: var(--fs-p);
+}
+
+/* utility classes */
+.flex {
+  display: flex;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+/* ############### */
+
 img {
   display: block;
   max-width: 100%;
   object-fit: cover;
+}
+
+.card {
+  width: 95%;
+  max-width: 356.25px;
+  margin: 0 auto;
+  background-color: var(--clr-card);
+  padding: 1.3em 1.3em 1.6em;
+  border-radius: 20px;
+}
+
+.avatar {
+  margin-bottom: 1.5em;
+  border-radius: 10px;
+  position: relative;
+}
+
+.avatar::before {
+  content: url("./images/icon-view.svg");
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 247, 0.6);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+}
+
+.avatar:hover {
+  cursor: pointer;
+}
+
+.avatar:hover::before {
+  opacity: 1;
+}
+
+.cube-img {
+  border-radius: 10px;
+}
+
+.content {
+  padding-bottom: 1.1em;
+  border-bottom: 1px solid var(--clr-border);
+  margin-bottom: 1.1em;
+}
+
+.title {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-bottom: 0.75em;
+  font-weight: var(--fw-600);
+  transition: color 0.1s ease-in;
+}
+
+.title:hover,
+.title:focus {
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.text {
+  color: var(--clr-accent);
+  font-weight: var(--fw-300);
+  margin-bottom: 1.2em;
+  line-height: 1.7;
+}
+
+.balance {
+  gap: 8px;
+  color: var(--clr-primary);
+  font-weight: var(--fw-400);
+}
+
+.time {
+  gap: 7px;
+  color: var(--clr-accent);
+}
+
+.author-details {
+  gap: 20px;
+}
+
+.author-img {
+  width: 35px;
+  border-radius: 50%;
+  outline: 1.5px solid var(--clr-white);
+}
+
+.created-by {
+  color: var(--clr-accent);
+  font-size: 1.05rem;
+}
+
+.author-name {
+  color: var(--clr-white);
+  transition: color 0.1s ease-in;
+}
+
+.author-name:hover,
+.author-name:focus {
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1140px) {
+  .text {
+    margin-bottom: 1.3em;
+  }
+
+  .content {
+    padding-bottom: 1.2em;
+  }
 }
