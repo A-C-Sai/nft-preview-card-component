@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: hsl(178, 100%, 50%);
+  --clr-accent: hsl(215, 51%, 70%);
+  --clr-body: hsl(217, 54%, 11%);
+  --clr-card: hsl(216, 50%, 16%);
+  --clr-border: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+  --fs-p: 18px;
+  --ff-main: "Outfit", sans-serif;
+}
+
+html,
+body,
+main {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
